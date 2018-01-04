@@ -73,8 +73,19 @@ i{
          -o-transition: $transition-05s;
             transition: $transition-05s;
 
-    color: #00b6f1;
-    background-color: #fff;
+    color: #fff !important;
+    background-color: #00b6f1;
+}
+
+.fa-github:hover
+{
+    -webkit-transition: $transition-05s;
+       -moz-transition: $transition-05s;
+         -o-transition: $transition-05s;
+            transition: $transition-05s;
+
+    color: #fff !important;
+    background-color: #333;
 }
 
 .fa-youtube:hover
@@ -202,4 +213,9 @@ a, a:hover, a:active{
 .delay-12s { 
 	animation-delay: 1.2s; 
 	-webkit-animation-delay: 1.2s; 
+}
+
+.delay-20s { 
+	animation-delay: 2s; 
+	-webkit-animation-delay: 2s; 
 }
