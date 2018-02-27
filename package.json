@@ -1,0 +1,30 @@
+{
+  "name": "bo-web",
+  "version": "1.0.0",
+  "description": "This will be the final design for the Lim Yutatco Sze Website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sze",
+    "boaz"
+  ],
+  "author": "Boaz Sze",
+  "license": "ISC",
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "bootstrap": "v4.0.0-beta.2",
+    "browser-sync": "^2.18.13",
+    "font-awesome": "^4.7.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-useref": "^3.1.3",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.9",
+    "smooth-scroll": "^12.1.5",
+    "sticky-js": "^1.2.0",
+    "wow.js": "^1.2.2"
+  }
+}
