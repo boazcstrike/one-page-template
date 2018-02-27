@@ -1,4 +1,4 @@
-# Template for One Pagers
+# Personal Template Live Refresh
 ###### For my personal use.
 
 Uses node for efficient edit-save-autorefresh functionality. Just run on cmd:
@@ -16,12 +16,18 @@ C:\ProjectDirectory>gulp
 ^ run the node
 ```
 
-Voila. Live/autorefresh on save should work now.
+Live/autorefresh on save should work now.
 
-**Just edit the sass file and you're good to go.
+js and css dependencies like bootstrap, etc. updates are manually copied and pasted, or just run tasks in gulp for automatic transfer from node_modules
+
+******The latest version of dependencies are copied and pasted as of 2/27/2018******
+
+**Just edit the .scss file and you're good to go.
 See gulpfile for details on the tasks.**
-To save you some trouble: 
+
+Take a peek at the gulp file:
 (*gulpfile.js*)
+
 ```javascript
 var gulp = require('gulp');
 var sass = require('gulp-sass');
@@ -35,6 +41,8 @@ gulp.task('watch', ['browserSync', 'sass'], function (){
   gulp.watch('js/**/*.js', browserSync.reload); 
 })
 
+
+// OLD VERSION
 gulp.task('sass', function(){
    	return gulp.src('scss/**/*.scss') // Gets all files ending with .scss in app/scss
     .pipe(sass())
@@ -44,10 +52,27 @@ gulp.task('sass', function(){
     }))
 });
 
+
 gulp.task('browserSync', function() {
   browserSync.init({
     server: {
       baseDir: ''
+    },
+  })
+})
+// OLD VERSION END
+
+gulp.task('sass', function(){
+    return gulp.src('scss/**/*.scss') // Gets all files ending with .scss in app/scss
+    .pipe(sass())
+    .pipe(gulp.dest('css'))
+    .pipe(browserSync.stream());
+});
+
+gulp.task('browserSync', function() {
+  browserSync.init({
+    server: {
+      baseDir: "./"
     },
   })
 })
